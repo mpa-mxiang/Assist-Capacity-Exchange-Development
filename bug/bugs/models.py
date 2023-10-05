@@ -1,4 +1,7 @@
+import datetime
+
 from django.db import models
+from django.utils import timezone
 
 # Create your models here.
 class Bug(models.Model):
@@ -22,6 +25,5 @@ class Bug(models.Model):
 
     def __str__(self):
         return self.description[:50] 
-
-    class Meta:
-        ordering = ['-report_date']
+    def was_reported_recently(self):
+        return self.report_date >= timezone.now() - datetime.timedelta(days=1)
