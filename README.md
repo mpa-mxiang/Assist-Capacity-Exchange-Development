@@ -2,9 +2,6 @@
 
 <a name="readme-top"></a>
 
-<div align="center">
-  <img src="#"  alt="project">
-  <br/>
 
   <h3><b> Assist Capacity Exchange Development</b></h3>
 
