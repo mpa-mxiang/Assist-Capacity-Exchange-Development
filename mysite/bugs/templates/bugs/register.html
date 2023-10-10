@@ -1,5 +1,5 @@
 <h1>Register a New Bug</h1>
-<form method="post">
+<form method="post" action="/bugs/register/">
     {% csrf_token %}
     <label for="description">Description:</label>
     <input type="text" id="description" name="description"><br><br>
