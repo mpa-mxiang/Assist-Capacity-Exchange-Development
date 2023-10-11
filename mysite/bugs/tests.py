@@ -1,5 +1,5 @@
 import datetime
-
+from django.urls import reverse
 from django.test import TestCase
 from django.utils import timezone
 
@@ -39,3 +39,29 @@ class BugsModelTests(TestCase):
         """
         bug = Bugs(bug_type="Test Bug")
         self.assertEqual(str(bug), "Test Bug")
+class BugsViewsTests(TestCase):
+    def test_index_view_with_no_bugs(self):
+        """
+        Test the index view when no bugs exist
+        """
+        response = self.client.get(reverse("index"))
+        self.assertEqual(response.status_code, 200)
+        self.assertQuerysetEqual(response.context["latest_bug_list"], [])
+
+    def test_index_view_with_a_bug(self):
+        """
+        Test the index view when a bug exists
+        """
+        bug = Bugs.objects.create(description="Test Bug", bug_type="Test Type", report_date=timezone.now(), status="New")
+        response = self.client.get(reverse("index"))
+        self.assertEqual(response.status_code, 200)
+        bug_types = [bug.bug_type for bug in response.context["latest_bug_list"]]
+        self.assertIn(bug.bug_type, bug_types)
+    def test_detail_view(self):
+        """
+        Test the detail view for a bug
+        """
+        bug = Bugs.objects.create(description="Test Bug", bug_type="Test Type", report_date=timezone.now(), status="New")
+        response = self.client.get(reverse("detail", args=(bug.id,)))
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, bug.description)
