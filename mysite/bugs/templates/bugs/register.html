@@ -1,0 +1,14 @@
+<h1>Register a New Bug</h1>
+<form method="post">
+    {% csrf_token %}
+    <label for="description">Description:</label><br>
+    <input type="text" id="description" name="description"><br><br>
+    
+    <label for="bug_type">Bug Type:</label><br>
+    <input type="text" id="bug_type" name="bug_type"><br><br>
+    
+    <label for="status">Status:</label><br>
+    <input type="text" id="status" name="status"><br><br>
+    
+    <button type="submit">Register Bug</button>
+</form>
