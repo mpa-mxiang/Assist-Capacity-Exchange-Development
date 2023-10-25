@@ -64,27 +64,27 @@ To get a local copy up and running, follow these steps:
 
 - Open your Terminal in your VSCode.
 - Navigate to the desired directory[folder] to which you want to clone the repository to
-- [Copy & Paste] git clone you find in the code button [https://github.com/GeekyHacks/Personal-Portfolio-Microverse.git](https://github.com/mpa-mxiang/Assist-Capacity-Exchange-Development---Task-1)
+- [Copy & Paste] git clone you find in the code button (https://github.com/mpa-mxiang/Assist-Capacity-Exchange-Development---Task-1)](https://github.com/mpa-mxiang/Assist-Capacity-Exchange-Development)
 
 ### Prerequisites
 
 In order to run this project you need:
 
 - General Understanding of Python & Django
-- basic Knowledge of Git Commands
-- basic Knowledge of the Terminal Commands
+- Basic knowledge of Git Commands
+- Basic knowledge of the Terminal Commands
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-- git clone [https://github.com/GeekyHacks/Personal-Portfolio-Microverse.git](https://github.com/mpa-mxiang/Assist-Capacity-Exchange-Development---Task-1)
+- git clone https://github.com/mpa-mxiang/Assist-Capacity-Exchange-Development
 
 Example commands:
 
 ```sh
   cd my-folder
-  git clone https://github.com/GeekyHacks/Personal-Portfolio-Microverse.git](https://github.com/mpa-mxiang/Assist-Capacity-Exchange-Development---Task-1
+  git clone https://github.com/mpa-mxiang/Assist-Capacity-Exchange-Development
 
 ```
 
@@ -100,6 +100,18 @@ Must-Install-Project-with-the-Following-Programmes:
 - Django
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### More
+1.```cd my-site```
+
+
+
+2. ```python manage.py runserver```
+
+
+
+
+3. Click on the link shows up, and add ```bugs``` as the suffix to see the index page.
 
 ## 👥 Authors <a name="authors"></a>
 
