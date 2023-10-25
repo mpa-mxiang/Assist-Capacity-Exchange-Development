@@ -34,7 +34,7 @@
 **Assist Capacity Exchange Development**
 This is the project to contribute to Wikimedia's open-source project.
 
-## 🛠 Built With <a name="built-with">HTML, CSS</a>
+## 🛠 Built With <a name="built-with"></a>
 
 ### Key Features <a name="key-features">
 
