@@ -5,9 +5,20 @@ from django.utils import timezone
 
 class Bugs(models.Model):
     description = models.CharField(max_length=200)
-    bug_type = models.CharField(max_length=200)
+    bug_type = [
+        ('error', "Error"),
+        ('new_feature', "New Feature"),
+        ('enhancement', "Enhancement"),
+        ('good_first_bug', "Good First Bug"),
+        ('others', "Others"),
+    ]
     report_date = models.DateTimeField("date published")
-    status = models.CharField(max_length=200)
+    status = [
+        ('to_do', "To Do"),
+        ('in_progress', "In Progress"),
+        ('done', "Done"),
+        ('archive', "Archive"),
+    ]
     def __str__(self):
         return self.bug_type
     def was_published_recently(self):
